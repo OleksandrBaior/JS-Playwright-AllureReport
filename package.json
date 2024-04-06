@@ -1,0 +1,22 @@
+{
+  "name": "playwright-framework",
+  "version": "1.0.0",
+  "description": "Web-Site  - https://www.redmine.org/",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OleksandrBaior/Playwright-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OleksandrBaior/Playwright-framework/issues"
+  },
+  "homepage": "https://github.com/OleksandrBaior/Playwright-framework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.12.4"
+  }
+}
