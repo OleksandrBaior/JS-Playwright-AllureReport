@@ -1,0 +1,15 @@
+{
+    "password": "NewPassword1+",
+
+    "userName" : {
+        "firstName": "Garrett",
+        "lastName": "Scheets"
+    },
+
+    "validUser": {
+        "login": "Lingerfelter",
+        "password": "NewPassword1",
+        "email": "ik@example.com"
+    }
+
+}

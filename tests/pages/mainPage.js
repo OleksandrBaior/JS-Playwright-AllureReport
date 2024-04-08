@@ -18,14 +18,6 @@ export class MainPage {
         this.page = page;
         this.navigationBarList = page.locator('#main-menu > ul > li');
         this.searchField = page.getByLabel('Search:');
-
-
+        this.registerBtn = page.getByRole('link', { name: 'Register' });
     }
-
-    // async navigateLoginPopUp() {
-    //     await this.page.goto('');
-    //     await this.page.waitForLoadState();
-    //     await this.loginBtn.click();
-    //     await expect(this.authorizationPopUp).toBeVisible();
-    // }
 }
