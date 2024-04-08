@@ -19,7 +19,7 @@ export class DownloadPage {
         this.thirdPartyRedmineBundleSection = page.locator('//*[@id="content"]/div[2]/h2[4]');
 
         this.svnRedmineOrgLink = page.getByRole('link', { name: 'https://svn.redmine.org/' });
-        this.svnRedmineOrgLinkTitle = page.getByRole('heading', { name: 'redmine - Revision 22777: /' });
+        this.svnRedmineOrgLinkTitle = page.locator('/html/body/h2');
 
         this.gitHubredmeLink = page.getByRole('link', { name: 'https://github.com/redmine/' });
         this.gitHubredmeBanner = page.getByRole('banner').getByLabel('Homepage');
