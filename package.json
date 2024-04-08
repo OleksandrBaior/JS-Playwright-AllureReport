@@ -18,5 +18,9 @@
   "devDependencies": {
     "@playwright/test": "^1.43.0",
     "@types/node": "^20.12.4"
+  },
+  "dependencies": {
+    "node-random-name": "^1.0.1",
+    "random-email": "^1.0.3"
   }
 }
