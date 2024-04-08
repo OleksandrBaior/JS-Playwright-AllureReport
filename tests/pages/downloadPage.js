@@ -32,9 +32,12 @@ export class DownloadPage {
     }
 
     async checkElementVisibleAndBack(element) {
-        await expect(element).toBeHidden();     
+        await expect(element).toBeVisible();
 
-         
+        const isVisible = await element.isVisible();
+        if (!isVisible) {
+            await expect(element).toBeHidden();
+        };
         await this.page.goBack();
     }
 
