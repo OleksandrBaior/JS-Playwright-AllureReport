@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { DownloadPage, downloadURL } from '../pages/downloadPage';
 
-test('TS_03 - Verify download page', async ({ page }) => {
+test('TS_03 - Verify download page', { tag: '@smoke'}, async ({ page }) => {
     const downloadPage = new DownloadPage(page);
     
     await page.goto(`${downloadURL}`);

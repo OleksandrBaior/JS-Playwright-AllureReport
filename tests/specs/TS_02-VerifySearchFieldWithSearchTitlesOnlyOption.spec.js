@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { MainPage } from '../pages/mainPage';
 import { SearchPage, searchPageTitle, valueForSearch } from '../pages/searchPage'
 
-test('TS_02 - Verify search field with Search titles only option', async ({ page }) => {
+test('TS_02 - Verify search field with Search titles only option', { tag: '@smoke'}, async ({ page }) => {
     const mainPage = new MainPage(page);
     const searchPage = new SearchPage(page);
 

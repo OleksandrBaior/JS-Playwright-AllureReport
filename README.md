@@ -27,3 +27,9 @@ Running a single test file:
 ```
 npx playwright test example-page.spec.ts
 ```
+
+Running a test file for tag:
+```
+ npx playwright test --grep=@[tag]
+
+
