@@ -29,15 +29,14 @@ export class DownloadPage {
 
         this.bitNamiLink = page.getByRole('link', { name: 'BitNami Redmine Stack' });
         this.bitNamiLogo = page.getByRole('link', { name: 'Bitnami by VMware logo' });
-
     }
 
-async checkElementVisibleAndBack(element) {
-    await expect(element).toBeVisible();
-    await this.page.goBack();
-}
-    
- 
+    async checkElementVisibleAndBack(element) {
+        await expect(element).toBeVisible();
+        await this.page.goBack();
+    }
+
+
 
 
 }

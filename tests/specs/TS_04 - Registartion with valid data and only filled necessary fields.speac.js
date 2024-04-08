@@ -5,7 +5,7 @@ import usersData from '../../resourcers/usersData.json'
 
 
 
-test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke'}, async ({ page }) => {
+test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke' }, async ({ page }) => {
     const mainPage = new MainPage(page);
     const registerPage = new RegisterPage(page);
 
@@ -21,13 +21,13 @@ test('TS_04 - Registartion with valid data and only filled necessary fields', { 
 
     await registerPage.passwordConfrmationField.fill(usersData.password);
     await expect(registerPage.passwordConfrmationField).toHaveValue(usersData.password);
-    
+
     await registerPage.firstNamenField.fill(usersData.userName.firstName);
     await expect(registerPage.firstNamenField).toHaveValue(usersData.userName.firstName);
-    
+
     await registerPage.lastNamenField.fill(usersData.userName.lastName);
     await expect(registerPage.lastNamenField).toHaveValue(usersData.userName.lastName);
-    
+
     const randEmail = await registerPage.generateRandomEmail();
     await registerPage.emailField.fill(randEmail);
     await expect(registerPage.emailField).toHaveValue(randEmail);
