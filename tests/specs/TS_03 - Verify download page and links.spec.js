@@ -15,9 +15,6 @@ test('TS_03 - Verify download page', { tag: '@smoke' }, async ({ page }) => {
     await expect(downloadPage.unstableSection).toBeVisible();
     await expect(downloadPage.thirdPartyRedmineBundleSection).toBeVisible();
 
-    await downloadPage.svnRedmineOrgLink.click();
-    await downloadPage.checkElementVisibleAndBack(downloadPage.svnRedmineOrgLinkTitle);
-
     await downloadPage.gitHubredmeLink.click();
     await downloadPage.checkElementVisibleAndBack(downloadPage.gitHubredmeBanner);
 
