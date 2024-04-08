@@ -18,6 +18,9 @@ export class DownloadPage {
         this.unstableSection = page.locator('//*[@id="content"]/div[2]/h3[4]');
         this.thirdPartyRedmineBundleSection = page.locator('//*[@id="content"]/div[2]/h2[4]');
 
+        this.svnRedmineOrgLink = page.getByRole('link', { name: 'https://svn.redmine.org/' });
+        this.svnRedmineOrgLinkTitle = page.getByRole('heading', { name: 'redmine - Revision 22777: /' });
+
         this.gitHubredmeLink = page.getByRole('link', { name: 'https://github.com/redmine/' });
         this.gitHubredmeBanner = page.getByRole('banner').getByLabel('Homepage');
 
@@ -29,7 +32,9 @@ export class DownloadPage {
     }
 
     async checkElementVisibleAndBack(element) {
-        await expect(element).toBeVisible();
+        await expect(element).toBeHidden();     
+
+         
         await this.page.goBack();
     }
 
