@@ -5,7 +5,7 @@ import usersData from '../../resourcers/usersData.json'
 
 
 
-test('TS_04 - Verify registering  with valid data and only with filled necessary fields', { tag: '@smoke'}, async ({ page }) => {
+test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke'}, async ({ page }) => {
     const mainPage = new MainPage(page);
     const registerPage = new RegisterPage(page);
 

@@ -6,10 +6,9 @@
         "lastName": "Scheets"
     },
 
-    "validUser": {
+    "validUserWithNotActivatedEmail": {
         "login": "Lingerfelter",
-        "password": "NewPassword1",
+        "password": "NewPassword1+",
         "email": "ik@example.com"
     }
-
 }

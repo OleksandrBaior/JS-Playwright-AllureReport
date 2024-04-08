@@ -19,5 +19,6 @@ export class MainPage {
         this.navigationBarList = page.locator('#main-menu > ul > li');
         this.searchField = page.getByLabel('Search:');
         this.registerBtn = page.getByRole('link', { name: 'Register' });
+        this.loginBtn = page.getByRole('link', { name: 'Sign in' });
     }
 }
