@@ -32,6 +32,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Download Playwright report artifact
         uses: actions/download-artifact@v3
         with:
@@ -39,8 +40,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          publish_branch: gh-page
+          publish_branch: gh-pages
           publish_dir: ./
-          github_token: ${{ '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' }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
     
     
