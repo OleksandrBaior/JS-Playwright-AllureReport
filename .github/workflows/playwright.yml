@@ -48,7 +48,6 @@ jobs:
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report
         with:
           allure_results: allure-results
           allure_history: allure-history
@@ -59,5 +58,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
