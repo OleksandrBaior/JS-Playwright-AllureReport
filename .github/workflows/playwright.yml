@@ -60,7 +60,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_branch: gh-pages
-          publish_dir: allure-results
+          publish_dir: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
       
     
