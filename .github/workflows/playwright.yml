@@ -46,6 +46,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
     
+
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -54,6 +55,7 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
           keep_reports: 20
+     
      
       - name: Deploy report to Github Pages
         if: always()
