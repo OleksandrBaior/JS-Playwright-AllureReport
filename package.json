@@ -4,7 +4,7 @@
   "description": "Web-Site  - https://www.redmine.org/",
   "main": "index.js",
   "scripts": {
-    "run_test_all": "npx playwright test --reporter=line,allure-playwright",
+    "run_test_all": "npx playwright test",
     "run_tests_in_UI_mode": "npx playwright test --ui",
     "run_tests_in_headed_mode": "npx playwright test --headed",
     "run_smoke tests": "npx playwright test --grep=@[smoke]",
