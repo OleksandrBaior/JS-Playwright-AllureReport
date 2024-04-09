@@ -61,20 +61,20 @@ jobs:
           publish_dir: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
  
-  allure:
-    needs: test
-    name: Generate Allure Report
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  # allure:
+  #   needs: test
+  #   name: Generate Allure Report
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+  #     - name: Get Allure history
+  #       uses: actions/checkout@v2
+  #       if: always()
+  #       continue-on-error: true
+  #       with:
+  #         ref: gh-pages
+  #         path: gh-pages
 
 
 
