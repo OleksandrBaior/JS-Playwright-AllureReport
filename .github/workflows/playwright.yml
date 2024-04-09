@@ -23,8 +23,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report
-          path: playwright-report/
+          name: allure-report
+          path: allure-report/
           retention-days: 30 
 
       - name: Generate Allure report
@@ -34,19 +34,19 @@ jobs:
           name: allure-report
           path: allure-report/  
   
-  # deploy:
-  #   needs: test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Download Playwright report artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: allure-report
-  #     - name: Deploy to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v3.7.3
-  #       with:
-  #         # branch: gh-pages
-  #         publish_dir: ./
-  #         github_token: ${{ secrets.PAT_TOKEN }}
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Playwright report artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-report
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3.7.3
+      #   with:
+      #     branch: gh-pages
+      #     publish_dir: ./
+      #     github_token: ${{ secrets.PAT_TOKEN }}
     
     
