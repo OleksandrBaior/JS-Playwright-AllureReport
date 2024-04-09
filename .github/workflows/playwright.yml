@@ -57,7 +57,7 @@ jobs:
      
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_branch: gh-pages
           publish_dir: allure-history
