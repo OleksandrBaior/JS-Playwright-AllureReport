@@ -1,0 +1,14 @@
+{
+    "password": "NewPassword1+",
+
+    "userName" : {
+        "firstName": "Garrett",
+        "lastName": "Scheets"
+    },
+
+    "validUserWithNotActivatedEmail": {
+        "login": "Lingerfelter",
+        "password": "NewPassword1+",
+        "email": "ik@example.com"
+    }
+}
