@@ -28,8 +28,6 @@ jobs:
           name: allure-report
           path: allure-report/  
 
-
-
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
