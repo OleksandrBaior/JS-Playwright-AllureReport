@@ -32,11 +32,11 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v4
-      # - name: Download Playwright report artifact
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: allure-report
+      - uses: actions/checkout@v4
+      - name: Download Playwright report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report
       - name: Get Allure history
         uses: actions/checkout@v4
         if: always()
