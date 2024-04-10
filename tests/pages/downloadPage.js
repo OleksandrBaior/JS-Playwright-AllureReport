@@ -7,7 +7,6 @@ export class DownloadPage {
     */
     constructor(page) {
         this.page = page;
-
         this.downloadTitle = page.locator('//*[@id="content"]/div[2]/h1');
         this.lastedRealesesSection = page.locator('//*[@id="content"]/div[2]/h2[1]');
         this.versionStatusSection = page.locator('//*[@id="content"]/div[2]/h2[2]');
