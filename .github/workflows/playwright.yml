@@ -38,7 +38,7 @@ jobs:
         continue-on-error: true
         with:
           ref: gh-pages
-          path: allure-history
+          path: allure-results
 
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
