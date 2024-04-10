@@ -18,9 +18,14 @@ Run your tests with UI Mode:
 npx playwright test --ui
 ```
 
-To open last HTML report run:
+To generate allure report:
 ```
-npx playwright show-report
+allure generate --clean
+```
+
+To open allure report:
+```
+allure open allure-report
 ```
 
 Running a single test file:
@@ -33,3 +38,7 @@ Running a test file for tag:
  npx playwright test --grep=@[tag]
 ```
 
+To debug tests with playwright inspector:
+```
+npx playwright test --debug
+```
