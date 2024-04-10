@@ -32,23 +32,22 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      
+      - name: Copy Allure History
+        if: ${{ env.GENERATE_REPORT == 'true' }}
+        run: |
+              mkdir -p ./allure_report_history/${{env.ALLURE_REPORT_FOLDER_PATH}}
+              cp -r ./allure_report_history/${{env.ALLURE_REPORT_FOLDER_PATH}}/. ./reports/${{env.ALLURE_REPORT_FOLDER_PATH}}/allure-results/history/
 
-      - name: Get Allure history
-        uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
+      - name: Deploy report history
+        if: ${{ env.GENERATE_REPORT == 'true' }}
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: ./allure-results
-          allure_report: ./allure-report
-          allure_history: ./allure-history
-          keep_reports: 20
+          branch: main
+          commit-message: Deploy report
+          folder: ./reports/${{env.ALLURE_REPORT_FOLDER_PATH}}/allure-report/history
+          target-folder: ./allure_report_history/${{env.ALLURE_REPORT_FOLDER_PATH}}
+    
 
       - name: Deploy report to Github Pages
         if: always()
