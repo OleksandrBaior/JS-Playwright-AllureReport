@@ -21,12 +21,12 @@ jobs:
         run: npx playwright install --with-deps 
       - name: Run Playwright tests
         run: npx playwright test
-      # - name: Generate Allure report
-      #   run: npx allure generate --clean
-      # - uses: actions/upload-artifact@v4
-      #   with:
-      #     name: allure-report
-      #     path: allure-report/  
+      - name: Generate Allure report
+        run: npx allure generate --clean
+      - uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/  
 
   deploy:
     needs: test
