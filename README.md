@@ -34,7 +34,7 @@ npx playwright test --debug
 ```
 
 ## Report 
-For reporting used Allure Report - Automation Test Reporting Tool
+For reporting used Allure Report - Automation Test Reporting Tool  
 Learn more about Allure Report at [Allure](https://allurereport.org/)
 
 To generate allure report:
