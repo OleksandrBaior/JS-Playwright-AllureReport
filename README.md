@@ -7,7 +7,7 @@ Web-Site  - https://www.redmine.org/
 3. Install project dependencies specified in the package.json `npm install`
 4. Install playwright `npx playwright install`.
 
-## Running the Tests 
+## Running Tests 
 Results of the tests and test logs will be shown in the terminal:
 ```
 npx playwright test
