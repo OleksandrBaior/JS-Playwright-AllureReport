@@ -2,10 +2,10 @@
 Web-Site  - https://www.redmine.org/
 
 ## Setup
-1. Install [node.js](https://nodejs.org/en/) and install all the dependencies for doing the full operation of the node.js.
-2. Clone git repository `git clone https://github.com/OleksandrBaior/Playwright-framework.git`
-3. Use installed node modules `npm install`
-4. Install playwright with all dependencies `npx playwright install --with-deps`.
+1. Install [node.js](https://nodejs.org/en/) - JavaScript runtime environment
+2. Clone git repository `git clone https://github.com/OleksandrBaior/JS-Playwright-AllureReport.g`
+3. Install project dependencies specified in the package.json `npm install`
+4. Install playwright `npx playwright install`.
 
 ## Running the Tests 
 Results of the tests and test logs will be shown in the terminal:
@@ -16,16 +16,6 @@ npx playwright test
 Run your tests with UI Mode:
 ```
 npx playwright test --ui
-```
-
-To generate allure report:
-```
-allure generate --clean
-```
-
-To open allure report:
-```
-allure open allure-report
 ```
 
 Running a single test file:
@@ -41,4 +31,18 @@ Running a test file for tag:
 To debug tests with playwright inspector:
 ```
 npx playwright test --debug
+```
+
+## Report 
+For reporting used Allure Report - Automation Test Reporting Tool
+Learn more about Allure Report at [Allure](https://allurereport.org/)
+
+To generate allure report:
+```
+allure generate --clean
+```
+
+To open allure report:
+```
+allure open allure-report
 ```
