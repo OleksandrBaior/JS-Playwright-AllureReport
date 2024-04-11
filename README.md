@@ -3,7 +3,7 @@ Web-Site  - https://www.redmine.org/
 
 ## Setup
 1. Install [node.js](https://nodejs.org/en/) and install all the dependencies for doing the full operation of the node.js.
-2. Clone git repository `git clone https://github.com/OleksandrBaior/Playwright-framework.git`
+2. Clone git repository `git clone https://github.com/OleksandrBaior/JS-Playwright-AllureReport.git`
 3. Use installed node modules `npm install`
 4. Install playwright with all dependencies `npx playwright install --with-deps`.
 
