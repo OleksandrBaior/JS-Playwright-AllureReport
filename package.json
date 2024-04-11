@@ -4,14 +4,13 @@
   "description": "Web-Site  - https://www.redmine.org/",
   "main": "index.js",
   "scripts": {
-    "run_test_all": "npx playwright test",
-    "run_tests_in_UI_mode": "npx playwright test --ui",
-    "run_tests_in_headed_mode": "npx playwright test --headed",
-    "run_smoke tests": "npx playwright test --grep=@[smoke]",
-    "debug_tests_with_playwright_inspector": "npx playwright test --debug",
-    "test_reports": "npx playwright show-report",
-    "generate_allure_report": "allure generate --clean",
-    "open_allure_report": "allure open allure-report"
+    "test:all": "npx playwright test",
+    "tests:UImode": "npx playwright test --ui",
+    "test:headedMode": "npx playwright test --headed",
+    "test:smokeTests": "npx playwright test --grep=@[smoke]",
+    "test:debugInspector": "npx playwright test --debug",
+    "generate:allureReport": "allure generate --clean",
+    "open:allureReport": "allure open allure-report"
   },
   "repository": {
     "type": "git",
