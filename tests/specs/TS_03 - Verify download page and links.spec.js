@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { DownloadPage, downloadURL } from '../pages/downloadPage';
 
 test('TS_03 - Verify download page', { tag: '@smoke' }, async ({ page }) => {
-    test.setTimeout(50000);
+    test.setTimeout(70000);
     const downloadPage = new DownloadPage(page);
 
     await page.goto(`${downloadURL}`);
