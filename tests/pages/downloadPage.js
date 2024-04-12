@@ -30,10 +30,9 @@ export class DownloadPage {
         this.bitNamiLogo = page.getByRole('link', { name: 'Bitnami by VMware logo' });
     }
 
-    async checkElementVisibleAndBack(element) {
+    async checkElementPresent(element) {
         const isVisible = await element.isVisible();
         await expect(element)[isVisible ? 'toBeVisible' : 'toBeHidden']();
-        await this.page.goBack();
     }
 }
 

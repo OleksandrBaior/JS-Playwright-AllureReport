@@ -13,5 +13,4 @@ test('TS_01 - Verify navigation bar on the main page', { tag: '@smoke' }, async 
         await expect(page).toHaveTitle(navigationBarListTitles[index]);
         await page.goBack();
     }
-    await page.close();
 })

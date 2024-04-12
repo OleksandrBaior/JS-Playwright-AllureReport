@@ -1,5 +1,4 @@
-import randomEmail from 'random-email';
-import random_name from 'node-random-name';
+import { faker } from '@faker-js/faker';
 
 export const successMsg = 'Account was successfully created. An email containing the instructions to activate your account was sent to ';
 
@@ -20,12 +19,10 @@ export class RegisterPage {
     }
 
     async generateRandomEmail() {
-        const randEmail = randomEmail({ domain: 'example.com' });
-        return randEmail;
+        return faker.internet.email()
     }
 
     async generateRandomLogin() {
-        const randomLogin = random_name({ last: true });
-        return randomLogin;
+       return faker.person.lastName('female' | 'male') 
     }
 }

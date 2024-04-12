@@ -3,8 +3,6 @@ import { MainPage } from '../pages/mainPage';
 import { RegisterPage, successMsg } from '../pages/registerPage';
 import usersData from '../../resourcers/usersData.json'
 
-
-
 test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke' }, async ({ page }) => {
     const mainPage = new MainPage(page);
     const registerPage = new RegisterPage(page);
@@ -34,7 +32,5 @@ test('TS_04 - Registartion with valid data and only filled necessary fields', { 
 
     await registerPage.sumbitBtn.click();
     await expect(registerPage.successMsg).toHaveText(successMsg + randEmail + '.');
-
-    await page.close();
 })
 

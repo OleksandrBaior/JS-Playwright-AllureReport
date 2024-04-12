@@ -19,7 +19,5 @@ test('TS_05 -  Authorization with valid data with not activated email', { tag: '
 
     await loginPage.loginBtn.click();
     await expect(loginPage.errorNotActivatedAcc).toHaveText(errorNotActivatedEmail);
-
-    await page.close();
 })
 

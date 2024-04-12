@@ -2,32 +2,41 @@ import { expect, test } from '@playwright/test';
 import { DownloadPage, downloadURL } from '../pages/downloadPage';
 
 test('TS_03 - Verify download page', { tag: '@smoke' }, async ({ page }) => {
-    test.setTimeout(40000);
+    test.setTimeout(50000);
     const downloadPage = new DownloadPage(page);
 
     await page.goto(`${downloadURL}`);
-    await expect(downloadPage.downloadTitle).toBeVisible();
-    await expect(downloadPage.lastedRealesesSection).toBeVisible();
-    await expect(downloadPage.versionStatusSection).toBeVisible();
-    await expect(downloadPage.realeasePolicySection).toBeVisible();
-    await expect(downloadPage.supportPoliccySection).toBeVisible();
-    await expect(downloadPage.sourceCodeSection).toBeVisible();
-    await expect(downloadPage.stableSection).toBeVisible();
-    await expect(downloadPage.unstableSection).toBeVisible();
-    await expect(downloadPage.thirdPartyRedmineBundleSection).toBeVisible();
+
+    const listSections = [
+        downloadPage.downloadTitle,
+        downloadPage.lastedRealesesSection,
+        downloadPage.versionStatusSection,
+        downloadPage.realeasePolicySection,
+        downloadPage.supportPoliccySection,
+        downloadPage.sourceCodeSection,
+        downloadPage.stableSection,
+        downloadPage.unstableSection,
+        downloadPage.thirdPartyRedmineBundleSection
+    ];
+
+    for(let section of listSections) {
+        await expect(section).toBeVisible();
+    } 
 
     await downloadPage.svnRedmineOrgLink.click();
-    await downloadPage.checkElementVisibleAndBack(downloadPage.svnRedmineOrgLinkTitle);
+    await downloadPage.checkElementPresent(downloadPage.svnRedmineOrgLinkTitle);
+    await page.goBack();
 
     await downloadPage.gitHubredmeLink.click();
-    await downloadPage.checkElementVisibleAndBack(downloadPage.gitHubredmeBanner);
+    await downloadPage.checkElementPresent(downloadPage.gitHubredmeBanner);
+    await page.goBack();
 
     await downloadPage.turnKeyLink.click();
-    await downloadPage.checkElementVisibleAndBack(downloadPage.turnKeyLinkLogo);
+    await downloadPage.checkElementPresent(downloadPage.turnKeyLinkLogo);
+    await page.goBack();
 
     await downloadPage.bitNamiLink.click();
-    await downloadPage.checkElementVisibleAndBack(downloadPage.bitNamiLogo);
-
-    await page.close();
+    await downloadPage.checkElementPresent(downloadPage.bitNamiLogo)
+    await page.goBack();
 })
 

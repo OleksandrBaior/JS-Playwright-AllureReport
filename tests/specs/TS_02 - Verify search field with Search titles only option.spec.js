@@ -16,6 +16,4 @@ test('TS_02 - Verify download page and links ', { tag: '@smoke' }, async ({ page
     await searchPage.searchBtn.click();
     const searchResultNew = await searchPage.searchResult.innerText();
     await expect(searchResult).not.toEqual(searchResultNew);
-
-    await page.close();
 }) 
