@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Apr 10 17:19:58 GMT 2024","Wed Apr 10 17:20:02 GMT 2024","4542","chromium","TS_05 - Authorization with valid data with not activated email.spec.js","","","","TS_05 -  Authorization with valid data with not activated email",""
-"passed","Wed Apr 10 17:19:26 GMT 2024","Wed Apr 10 17:19:30 GMT 2024","4168","chromium","TS_02 - Verify search field with Search titles only option.spec.js","","","","TS_02 - Verify download page and links",""
-"passed","Wed Apr 10 17:19:52 GMT 2024","Wed Apr 10 17:19:58 GMT 2024","5762","chromium","TS_04 - Registartion with valid data and only filled necessary fields.spec.js","","","","TS_04 - Registartion with valid data and only filled necessary fields",""
-"passed","Wed Apr 10 17:19:43 GMT 2024","Wed Apr 10 17:19:52 GMT 2024","8740","chromium","TS_03 - Verify download page and links.spec.js","","","","TS_03 - Verify download page",""
-"passed","Wed Apr 10 17:19:07 GMT 2024","Wed Apr 10 17:19:26 GMT 2024","19013","chromium","TS_01 - Verify navigation bar on the main page.spec.js","","","","TS_01 - Verify navigation bar on the main page",""
