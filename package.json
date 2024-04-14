@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test:all": "npx playwright test",
-    "tests:UImode": "npx playwright test --ui",
+    "test:UImode": "npx playwright test --ui",
     "test:headedMode": "npx playwright test --headed",
-    "test:smokeTests": "npx playwright test --grep=@[smoke]",
+    "test:smoke": "npx playwright test --grep=@[smoke]",
     "test:debugInspector": "npx playwright test --debug",
     "generate:allureReport": "allure generate --clean",
-    "open:allureReport": "allure open allure-report"
+    "open:allureReport": "allure open allure-report",
+    "open:HTMLReport": "npx playwright show-report"
   },
   "repository": {
     "type": "git",

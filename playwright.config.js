@@ -22,12 +22,12 @@ module.exports = defineConfig({
   retries: process.env.CI ? 1 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 5 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  // reporter: 'html',
+  // /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  // reporter: 
   reporter: [
-    ["list"],
-    [
-      "allure-playwright",
+    ['html', { open: 'never'  }],
+    ['list', { printSteps: true }],
+    ["allure-playwright",
       {
         detail: true,
         suiteTitle: false,
@@ -47,8 +47,9 @@ module.exports = defineConfig({
     baseURL: 'https://www.redmine.org/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    // trace: 'on-first-retry',
-    video: 'retain-on-failure'
+    trace: 'retain-on-failure',
+    video: 'retain-on-failure',
+    screenshot: 'only-on-failure'
   },
 
   /* Configure projects for major browsers */
@@ -57,46 +58,7 @@ module.exports = defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
-
-  
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
 }
 );
 

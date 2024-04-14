@@ -10,10 +10,10 @@ test('TS_02 - Verify download page and links ', { tag: '@smoke' }, async ({ page
     await mainPage.searchField.fill(valueForSearch);
     await page.keyboard.press('Enter');
     await expect(page).toHaveTitle(searchPageTitle);
-    const searchResult = await searchPage.searchResult.innerText();
+    const previouSearchResult = await searchPage.searchResult.innerText();
 
     await searchPage.searchTitleOnlyCheck.check();
     await searchPage.searchBtn.click();
-    const searchResultNew = await searchPage.searchResult.innerText();
-    await expect(searchResult).not.toEqual(searchResultNew);
+    const newSearchResult = await searchPage.searchResult.innerText();
+    expect(previouSearchResult).not.toContain(newSearchResult);
 }) 
