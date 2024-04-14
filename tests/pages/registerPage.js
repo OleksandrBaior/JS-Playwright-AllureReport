@@ -19,10 +19,10 @@ export class RegisterPage {
     }
 
     async generateRandomEmail() {
-        return faker.internet.email()
+        return faker.internet.email();
     }
 
     async generateRandomLogin() {
-       return faker.person.lastName('female' | 'male') 
+        return faker.internet.userName();
     }
 }
