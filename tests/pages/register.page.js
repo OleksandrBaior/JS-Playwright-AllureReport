@@ -1,11 +1,12 @@
 import { faker } from '@faker-js/faker';
+import { MainPage } from './main.page';
 
-export class RegisterPage {
+export class RegisterPage extends MainPage  {
     /**
     * @param {import('@playwright/test').Page} page
     */
     constructor(page) {
-        this.page = page;
+        super(page);
         this.loginField = page.getByLabel('Login *');
         this.passwordField = page.getByLabel('Password *');
         this.passwordConfrmationField = page.getByLabel('Confirmation *');

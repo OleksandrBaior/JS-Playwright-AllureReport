@@ -1,11 +1,13 @@
 import { expect } from '@playwright/test';
+import { MainPage } from './main.page';
+import endpoints from '../../resourcers/endpoints.json'
 
-export class DownloadPage {
+export class DownloadPage extends MainPage {
     /**
     * @param {import('@playwright/test').Page} page
     */
     constructor(page) {
-        this.page = page;
+        super(page);
         this.sectionsPage = {
             downloadTitle: page.locator('//*[@id="content"]/div[2]/h1'),
             lastedRealeses: page.locator('//*[@id="content"]/div[2]/h2[1]'),
@@ -29,6 +31,9 @@ export class DownloadPage {
 
         this.bitNamiLink = page.getByRole('link', { name: 'BitNami Redmine Stack' });
         this.bitNamiLogo = page.getByRole('link', { name: 'Bitnami by VMware logo' });
+    }
+    async open() {
+        await this.page.goto(endpoints.download);
     }
     /**
      * Method verifies that an element is present in DOM.

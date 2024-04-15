@@ -7,7 +7,7 @@ test('TS_01 - Verify navigation bar on the main page', { tag: '@smoke' }, async 
     const mainPage = new MainPage(page);
 
     await test.step('Go to the manin page', async () => {
-        await page.goto('/');
+        await mainPage.open();
     });
     await test.step('Expect that all elements is present in navigation bar', async () => {
         await expect(mainPage.navigationBarList).toHaveCount(9);

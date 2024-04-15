@@ -9,7 +9,7 @@ test('TS_02 - Verify download page and links ', { tag: '@smoke' }, async ({ page
     const searchPage = new SearchPage(page);
 
     await test.step("Go to the manin page", async () => {
-        await page.goto('/');
+        await mainPage.open();
     })
     await test.step("Fill the search field", async () => {
         await mainPage.searchField.fill(constants.valueForSearch);

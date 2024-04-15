@@ -9,7 +9,7 @@ test('TS_05 -  Authorization with valid data with not activated email', { tag: '
     const loginPage = new LoginPage(page);
 
     await test.step('Go to the manin page', async () => {
-        await page.goto(`/`);
+        await mainPage.open();
     })
     await test.step('Click on the login button', async () => {
         await mainPage.loginBtn.click();

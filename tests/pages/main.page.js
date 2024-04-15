@@ -9,4 +9,8 @@ export class MainPage {
         this.registerBtn = page.getByRole('link', { name: 'Register' });
         this.loginBtn = page.getByRole('link', { name: 'Sign in' });
     }
+
+    async open() {
+        await this.page.goto('/');
+    }
 }

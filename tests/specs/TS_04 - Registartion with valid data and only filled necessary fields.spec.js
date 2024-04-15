@@ -9,7 +9,7 @@ test('TS_04 - Registartion with valid data and only filled necessary fields', { 
     const registerPage = new RegisterPage(page);
 
     await test.step('Go to the manin page', async () => {
-        await page.goto(`/`);
+        await mainPage.open();
     })
 
     await test.step('Click on registration button', async () => {
