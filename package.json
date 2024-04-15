@@ -9,8 +9,8 @@
     "test:headedMode": "npx playwright test --headed",
     "test:smoke": "npx playwright test --grep=@[smoke]",
     "test:debugInspector": "npx playwright test --debug",
-    "generate:allureReport": "allure generate --clean",
-    "open:allureReport": "allure open allure-report",
+    "generate:allureReport": "allure generate --clean -o reports/allure-report reports/allure-results",
+    "open:allureReport": "allure open reports/allure-report",
     "open:HTMLReport": "npx playwright show-report"
   },
   "repository": {

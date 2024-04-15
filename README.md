@@ -54,13 +54,13 @@ Learn more about Allure Report at [Allure](https://allurereport.org/)
 To generate allure report:
 
 ```
-allure generate --clean
+allure generate --clean -o reports/allure-report reports/allure-results
 ```
 
 To open allure report:
 
 ```
-allure open allure-report
+allure open reports/allure-report
 ```
 
 ## 📝 Playwright Report
