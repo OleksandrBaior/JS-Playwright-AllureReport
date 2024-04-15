@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { MainPage } from '../pages/mainPage';
-import { RegisterPage, successMsg } from '../pages/registerPage';
+import { MainPage } from '../pages/main.page';
+import { RegisterPage, successMsg } from '../pages/register.page';
 import usersData from '../../resourcers/usersData.json'
 
 test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke' }, async ({ page }) => {

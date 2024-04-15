@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { MainPage } from '../pages/mainPage';
-import { SearchPage, searchPageTitle, valueForSearch } from '../pages/searchPage'
+import { MainPage } from '../pages/main.page';
+import { SearchPage, searchPageTitle, valueForSearch } from '../pages/search.page'
 
 test('TS_02 - Verify download page and links ', { tag: '@smoke' }, async ({ page }) => {
     const mainPage = new MainPage(page);

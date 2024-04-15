@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { DownloadPage, downloadURL } from '../pages/downloadPage';
+import { DownloadPage, downloadURL } from '../pages/download.page';
 
 test('TS_03 - Verify download page', { tag: '@smoke' }, async ({ page }) => {
     test.setTimeout(70000);
