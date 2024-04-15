@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { MainPage, navigationBarListTitles } from '../pages/main.page';
+import { MainPage } from '../pages/main.page';
+import { navigationBarListTitles } from '../../resourcers/dataMainPage';
 
 test('TS_01 - Verify navigation bar on the main page', { tag: '@smoke' }, async ({ page }) => {
     test.setTimeout(70000);
