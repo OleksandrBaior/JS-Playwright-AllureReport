@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Apr 15 10:21:07 GMT 2024","Mon Apr 15 10:21:28 GMT 2024","20870","chromium","","","","","TS_05 -  Authorization with valid data with not activated email",""
+"passed","Mon Apr 15 10:21:07 GMT 2024","Mon Apr 15 10:21:52 GMT 2024","44915","chromium","","","","","TS_01 - Verify navigation bar on the main page",""
+"passed","Mon Apr 15 10:21:07 GMT 2024","Mon Apr 15 10:21:28 GMT 2024","20619","chromium","","","","","TS_02 - Verify download page and links",""
+"passed","Mon Apr 15 10:21:09 GMT 2024","Mon Apr 15 10:21:34 GMT 2024","25743","chromium","","","","","TS_04 - Registartion with valid data and only filled necessary fields",""
+"passed","Mon Apr 15 10:21:07 GMT 2024","Mon Apr 15 10:21:37 GMT 2024","30077","chromium","","","","","TS_03 - Verify download page",""
