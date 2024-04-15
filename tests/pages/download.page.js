@@ -34,7 +34,7 @@ export class DownloadPage {
     /**
      * Method verifies that an element is present in DOM.
      * @param {element} element - Element on the page.
-     * @returns {Boolean} True of False .
+     * @returns {Boolean} True or False .
      */
     async checkElementPresent(element) {
         const isVisible = await element.isVisible();
