@@ -1,7 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-export const successMsg = 'Account was successfully created. An email containing the instructions to activate your account was sent to ';
-
 export class RegisterPage {
     /**
     * @param {import('@playwright/test').Page} page

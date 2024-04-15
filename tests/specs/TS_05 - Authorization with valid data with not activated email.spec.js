@@ -1,7 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { MainPage } from '../pages/main.page';
 import usersData from '../../resourcers/usersData.json'
-import { LoginPage, errorNotActivatedEmail } from '../pages/login.page';
+import { LoginPage } from '../pages/login.page';
+import constants from '../../resourcers/constants.json';
 
 test('TS_05 -  Authorization with valid data with not activated email', { tag: '@smoke' }, async ({ page }) => {
     const mainPage = new MainPage(page);
@@ -28,7 +29,7 @@ test('TS_05 -  Authorization with valid data with not activated email', { tag: '
         await loginPage.loginBtn.click();
     })
     await test.step('Expect that the "Not activated email" appears', async () => {
-        await expect(loginPage.errorNotActivatedAcc).toHaveText(errorNotActivatedEmail);
-    })   
+        await expect(loginPage.errorNotActivatedAcc).toHaveText(constants.errorNotActivatedEmail);
+    })
 })
 

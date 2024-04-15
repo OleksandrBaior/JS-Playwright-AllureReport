@@ -1,0 +1,21 @@
+ {
+    "navigationBarListTitles": [
+        "Overview - Redmine",
+        "Download - Redmine",
+        "Activity - Redmine",
+        "Roadmap - Redmine",
+        "Issues - Redmine",
+        "News - Redmine",
+        "Overview - Redmine",
+        "Forums - Redmine",
+        "/ - Repository - Redmine"
+    ],
+
+    "errorNotActivatedEmail": "You haven't activated your account yet. If you want to receive a new activation email, please click this link.",
+    "successMsg": "Account was successfully created. An email containing the instructions to activate your account was sent to ",
+    "searchPageTitle": "Search - Redmine",
+    "valueForSearch": "user"
+
+ }
+
+

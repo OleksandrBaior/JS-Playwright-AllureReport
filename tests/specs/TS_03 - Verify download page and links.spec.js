@@ -1,12 +1,13 @@
 import { expect, test } from '@playwright/test';
-import { DownloadPage, downloadURL } from '../pages/download.page';
+import { DownloadPage } from '../pages/download.page';
+import endpoints from '../../resourcers/endpoints.json'
 
 test('TS_03 - Verify download page', { tag: '@smoke' }, async ({ page }) => {
     test.setTimeout(70000);
     const downloadPage = new DownloadPage(page);
 
     await test.step("Go to the Download page", async () => {
-        await page.goto(`${downloadURL}`);
+        await page.goto(endpoints.download);
     })
 
     for (let [name, section] of Object.entries(downloadPage.sectionsPage)) {

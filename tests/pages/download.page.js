@@ -1,5 +1,4 @@
 import { expect } from '@playwright/test';
-export const downloadURL = '/projects/redmine/wiki/Download'
 
 export class DownloadPage {
     /**

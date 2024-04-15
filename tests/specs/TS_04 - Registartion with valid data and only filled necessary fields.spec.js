@@ -1,7 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { MainPage } from '../pages/main.page';
-import { RegisterPage, successMsg } from '../pages/register.page';
+import { RegisterPage } from '../pages/register.page';
 import usersData from '../../resourcers/usersData.json'
+import constants from '../../resourcers/constants.json';
 
 test('TS_04 - Registartion with valid data and only filled necessary fields', { tag: '@smoke' }, async ({ page }) => {
     const mainPage = new MainPage(page);
@@ -10,7 +11,7 @@ test('TS_04 - Registartion with valid data and only filled necessary fields', { 
     await test.step('Go to the manin page', async () => {
         await page.goto(`/`);
     })
-    
+
     await test.step('Click on registration button', async () => {
         await mainPage.registerBtn.click();
     })
@@ -43,7 +44,7 @@ test('TS_04 - Registartion with valid data and only filled necessary fields', { 
 
     await test.step('Click on submit button and check the confirmation message appears', async () => {
         await registerPage.sumbitBtn.click();
-        await expect(registerPage.successMsg).toHaveText(successMsg + randEmail + '.');
+        await expect(registerPage.successMsg).toHaveText(constants.successMsg + randEmail + '.');
     })
 })
 

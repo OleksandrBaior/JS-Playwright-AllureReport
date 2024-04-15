@@ -1,5 +1,3 @@
-export const errorNotActivatedEmail = "You haven't activated your account yet. If you want to receive a new activation email, please click this link.";
-
 export class LoginPage {
     /**
     * @param {import('@playwright/test').Page} page

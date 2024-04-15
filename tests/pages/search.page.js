@@ -1,6 +1,3 @@
-export const searchPageTitle = 'Search - Redmine'
-export const valueForSearch = "user"
-
 export class SearchPage {
     /**
     * @param {import('@playwright/test').Page} page
