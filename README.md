@@ -71,7 +71,7 @@ Learn more about Playwright Reports at [Reports](https://playwright.dev/docs/tes
 To open html report :
 
 ```
-npx playwright show-report
+npx playwright show-report reports\html-report
 ```
 
 ## 🌏 Link of Allure report on CI 

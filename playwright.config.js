@@ -10,6 +10,8 @@ module.exports = defineConfig({
   expect: {
     timeout: 10 * 1000,
   },
+    /* Folder of report */
+  outputDir: "reports/test-results",
     /* Folder of tests */
   testDir: './tests/specs',
   /* Run tests in files in parallel */
@@ -23,7 +25,7 @@ module.exports = defineConfig({
   // /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: 
   reporter: [
-    ['html', { open: 'never'  }],
+    ['html', { open: 'never', outputFolder: 'reports/html-report' }],
     ['list', { printSteps: true }],
     ["allure-playwright",
       {
@@ -47,7 +49,7 @@ module.exports = defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
     video: 'retain-on-failure',
-    screenshot: 'only-on-failure'
+    screenshot: 'only-on-failure',
   },
   /* Configure projects for major browsers */
   projects: [
