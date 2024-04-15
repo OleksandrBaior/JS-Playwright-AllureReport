@@ -7,15 +7,17 @@ export class DownloadPage {
     */
     constructor(page) {
         this.page = page;
-        this.downloadTitle = page.locator('//*[@id="content"]/div[2]/h1');
-        this.lastedRealesesSection = page.locator('//*[@id="content"]/div[2]/h2[1]');
-        this.versionStatusSection = page.locator('//*[@id="content"]/div[2]/h2[2]');
-        this.realeasePolicySection = page.locator('//*[@id="content"]/div[2]/h3[1]');
-        this.supportPoliccySection = page.locator('//*[@id="content"]/div[2]/h3[2]');
-        this.sourceCodeSection = page.locator('//*[@id="content"]/div[2]/h2[3]');
-        this.stableSection = page.locator('//*[@id="content"]/div[2]/h3[3]');
-        this.unstableSection = page.locator('//*[@id="content"]/div[2]/h3[4]');
-        this.thirdPartyRedmineBundleSection = page.locator('//*[@id="content"]/div[2]/h2[4]');
+        this.sectionsPage = {
+            downloadTitle: page.locator('//*[@id="content"]/div[2]/h1'),
+            lastedRealeses: page.locator('//*[@id="content"]/div[2]/h2[1]'),
+            versionStatus: page.locator('//*[@id="content"]/div[2]/h2[2]'),
+            realeasePolicy: page.locator('//*[@id="content"]/div[2]/h3[1]'),
+            supportPolicy: page.locator('//*[@id="content"]/div[2]/h3[2]'),
+            sourceCode: page.locator('//*[@id="content"]/div[2]/h2[3]'),
+            stable: page.locator('//*[@id="content"]/div[2]/h3[3]'),
+            unstable: page.locator('//*[@id="content"]/div[2]/h3[4]'),
+            thirdPartyRedmineBundle: page.locator('//*[@id="content"]/div[2]/h2[4]')
+        }
 
         this.svnRedmineOrgLink = page.getByRole('link', { name: 'https://svn.redmine.org/' });
         this.svnRedmineOrgLinkTitle = page.getByRole('heading', { name: 'redmine - Revision 22777: /' });
