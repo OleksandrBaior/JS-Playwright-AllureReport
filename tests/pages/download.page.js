@@ -31,7 +31,11 @@ export class DownloadPage {
         this.bitNamiLink = page.getByRole('link', { name: 'BitNami Redmine Stack' });
         this.bitNamiLogo = page.getByRole('link', { name: 'Bitnami by VMware logo' });
     }
-
+    /**
+     * Method verifies that an element is present in DOM.
+     * @param {element} element - Element on the page.
+     * @returns {Boolean} True of False .
+     */
     async checkElementPresent(element) {
         const isVisible = await element.isVisible();
         await expect(element)[isVisible ? 'toBeVisible' : 'toBeHidden']();
