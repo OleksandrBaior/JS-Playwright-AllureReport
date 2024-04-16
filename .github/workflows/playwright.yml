@@ -34,7 +34,7 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: html-report
-          path: reports/html-report
+          path: reports
           retention-days: 30 
 
       - name: Get Allure history
