@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: reports/html-report
+          name: html-report
           path: reports/html-report
           retention-days: 30 
 
