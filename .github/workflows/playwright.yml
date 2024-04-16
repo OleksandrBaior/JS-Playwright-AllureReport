@@ -27,8 +27,16 @@ jobs:
         run: npx playwright install --with-deps 
 
       - name: Run Playwright tests
-        run: npx playwright test  
-
+        run: npx playwright test
+        
+      - name: Create playwright-report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: reports/playwright-report
+          path: reports/playwright-report
+          retention-days: 30 
+          
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
