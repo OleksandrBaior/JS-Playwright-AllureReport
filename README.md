@@ -76,7 +76,7 @@ npx playwright show-report reports\html-report
 
 ## 🌏 Link of Allure report on CI 
 
-[https://oleksandrbaior.github.io/JS-Playwright-AllureReport](https://oleksandrbaior.github.io/JS-Playwright-AllureReport/) 
+[https://oleksandrbaior.github.io/Playwright_framework_AllureReport_JS/index.html](https://oleksandrbaior.github.io/Playwright_framework_AllureReport_JS/index.html) 
 
 ## 🔑 License
 
